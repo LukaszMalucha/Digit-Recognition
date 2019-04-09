@@ -18,7 +18,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
-app.config['DEBUG'] = True
+app.config['DEBUG'] = False
 api = Api(app)
 
 Bootstrap(app)
@@ -54,4 +54,13 @@ if __name__ == '__main__':
         def create_tables():
             db.create_all()
 
-    app.run()
+
+    # app.run(debug=True)
+
+    # Docker
+    #     app.run(host='0.0.0.0')
+
+    # Heroku
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+

@@ -238,13 +238,9 @@ h2 {
 
 
 @media(max-width:1700px) {
-
-    .row-form {
-        width: 40%;
-    }
-
-    .btn-submit {
-        width: 30%;
+    .card-prediction {
+        margin-left: 100px;
+        width: 60%;
     }
 
 }
@@ -253,45 +249,11 @@ h2 {
 
 @media(max-width:993px) {
 
-    .row-title {
-        width:90%;
-        font-size: 1.5rem;
-
-    }
-
-    .row-cards {
-        width: 80%;
-    }
-
-    .row-form {
-        width: 50%;
-    }
-
-    .btn-submit {
-        width: 60%;
-    }
-
 }
 
 
 /* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
 
 @media(max-width:522px) {
-
-    .row-title {
-        width:90%;
-        font-size: 1.5rem;
-
-    }
-
-    .row-cards {
-        width: 100%;
-    }
-
-    .row-form {
-        width: 80%;
-    }
-
-
 
 }
