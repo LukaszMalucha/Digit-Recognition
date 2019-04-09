@@ -1,8 +1,52 @@
 {% extends 'base.html' %} {% block content %}
+
+<div class="row row-title">
+    <i class="fas fa-pen"></i>&nbsp; Draw some Digit
+</div>
+<div class="dashboard-cards">
+    <div class="row row-cards">
+        <div class="col-md-5">
+            <div class="card card-canvas">
+                <div class="card-image">
+                    <canvas id="canvas" height="500"></canvas>
+                </div>
+                <button type="submit" class="btn-card"><span>Predict <i
+                        class="far fa-arrow-alt-circle-right"></i></span>
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+ $("#predict").click(function(){
+    var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    var canvasObj = document.getElementById("canvas");
+    var img = canvasObj.toDataURL();
+    $.ajax({
+        type: "POST",
+        url: $SCRIPT_ROOT + "/predict",
+        data: img,
+        success: function(data){
+            $('#result').text(data);
+        }
+    });
+});
+
+
+
+
+</script>
+
+{% endblock %}
+
 <div class="card text-center" id="main_card">
     <br>
     <div class="row">
-        <div class="col-md-1 text-center"></div>
         <div class="col-md-5 text-center">
             <div class="card text-center" id="dashboard_card">
                 <div class="row">
@@ -10,6 +54,7 @@
                     <div class="col-md-8 text-center">
                         <br>
                         <h2>Draw a Digit</h2>
+                        <input type="button" id="clear" value="Clear Canvas" class="button-function">
                     </div>
                     <div class="col-md-2 text-center"></div>
                 </div>
@@ -22,14 +67,9 @@
                     <div class="col-md-2 text-center"></div>
                 </div>
                 <div class="row text-center button-row">
-                    <div class="col-md-2 text-center"></div>
                     <div class="col-md-4 text-center button-column">
-                        <input type="button" id="clear" value="Clear Canvas" class="button-function">
+
                     </div>
-                    <div class="col-md-4 text-center button-column">
-                        <input id="download" type="button" class="button-function" value="Download Img">
-                    </div>
-                    <div class="col-md-2 text-center"></div>
                 </div>
                 <br><br>
             </div>
@@ -53,27 +93,6 @@
 
             </div>
         </div>
-
+    <a id="predict" class="btn btn-card">Predict</a>
     </div>
 </div>
-
-<script type="text/javascript">
-
- $("#predict").click(function(){
-    var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
-    var canvasObj = document.getElementById("canvas");
-    var img = canvasObj.toDataURL();
-    $.ajax({
-        type: "POST",
-        url: $SCRIPT_ROOT + "/predict",
-        data: img,
-        success: function(data){
-            $('#result').text(data);
-        }
-    });
-});
-
-
-</script>
-
-{% endblock %}
