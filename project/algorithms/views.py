@@ -1,4 +1,4 @@
-from flask import render_template, request, Blueprint, session
+from flask import render_template, request, Blueprint
 
 from scipy.misc import imread, imresize
 import numpy as np
