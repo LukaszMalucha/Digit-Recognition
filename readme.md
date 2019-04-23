@@ -1,11 +1,11 @@
 # Digit Recognition with Keras
 
 
-#### [Visit App on Heroku](https://digit-prediction.herokuapp.com/)
+#### [Visit App on Heroku](https://digit-prediction1.herokuapp.com/)
 
 <br>
 
-![1](https://user-images.githubusercontent.com/26208598/55821040-756b5800-5af4-11e9-9b8b-0d1f5455d17a.JPG)
+![1](https://user-images.githubusercontent.com/26208598/56574128-65ef1300-65ba-11e9-89cd-27e93b8f92e5.JPG)
 
 <br>
 

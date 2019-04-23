@@ -13,11 +13,12 @@
 </div>
 <div class="dashboard-cards">
     <div class="row row-cards">
-        <div class="col-md-5">
+        <div class="col-sm-1 col-md-1"></div>
+        <div class="col-sm-4 col-md-4">
             <div class="card card-canvas">
                 <button id="clear" class="btn btn-canvas">Clear Canvas</button>
                 <div class="card-image">
-                    <canvas id="canvas" height="500" width="474"></canvas>
+                    <canvas id="canvas" height="300" width="280"></canvas>
                 </div>
                 <button id="predict" type="submit" class="btn-card"><span>Predict <i
                         class="far fa-arrow-alt-circle-right"></i></span>
@@ -25,12 +26,12 @@
 
             </div>
         </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
+        <div class="col-sm-2 col-md-2"></div>
+        <div class="col-sm-4 col-md-4">
             <div class="card card-prediction">
                 <div class="card-content">
                     <span class="card-title">You Draw:</span>
-                    <br>
+                    <div class="loader"></div>
                     <h1 id="result"> ?</h1>
 
 

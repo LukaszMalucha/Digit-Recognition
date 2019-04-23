@@ -24,7 +24,7 @@ $canvas.mousedown(function(e){
         context.moveTo(lastEvent.offsetX, lastEvent.offsetY);
         context.lineTo(e.offsetX, e.offsetY);
         context.strokeStyle = "white";
-        context.lineWidth = 25;
+        context.lineWidth = 15;
         context.stroke();
         lastEvent = e;
 }
@@ -43,12 +43,16 @@ document.getElementById('clear').addEventListener('click', function() {
 $("#predict").click(function(){
     var canvasObj = document.getElementById("canvas");
     var img = canvasObj.toDataURL();
+    $('#result').hide();
+    $('.loader').show();
     $.ajax({
         type: "POST",
         url: "/predict",
         data: img,
         success: function(data){
+            $('#result').show();
             $('#result').text(data);
+            $('.loader').hide();
         }
     });
 });

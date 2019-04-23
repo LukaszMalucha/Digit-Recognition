@@ -94,7 +94,7 @@ h2 {
 
 
 .row-cards {
-    width: 70%;
+    width: 50%;
     text-align: center;
     padding: 4% 0% 4% 0%;
 }
@@ -112,12 +112,13 @@ h2 {
 .card-canvas {
     border-radius: 10px;
     position: relative;
-    width: 474px;
+    width: 280px;
 }
 
 .card-prediction {
     border-radius: 10px;
-    width: 50%;
+    width: 100%;
+    height: 345px;
     margin: auto;
     margin-top: .5rem;
     background: black;
@@ -125,7 +126,8 @@ h2 {
 }
 
 .card-prediction h1 {
-    font-size: 120px;
+    font-size: 160px;
+    margin-top: 1rem;
 }
 
 /*------------------------------------------------------------------------------
@@ -134,7 +136,7 @@ h2 {
 
 #canvas {
     margin: 0;
-    height: 500px;
+    height: 300px;
     background: black;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -213,13 +215,14 @@ h2 {
 ------------------------------------------------------------------------------*/
 
 .loader {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #8c8c8c;
+  border: 8px solid #2e4864;
+  border-top: 8px solid #fff;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 80px;
+  height: 80px;
   animation: spin 1.5s linear infinite;
   margin: auto;
+  margin-top: 30%;
   display: none;
 }
 
@@ -227,6 +230,8 @@ h2 {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+
 
 
 /*------------------------------------------------------------------------------
@@ -240,6 +245,12 @@ h2 {
 @media(max-width:1700px) {
     .card-prediction {
         margin-left: 100px;
+        width: 100%;
+        margin-bottom: 50px;
+        margin-left: 5%;
+    }
+
+    .row-cards {
         width: 60%;
     }
 
@@ -248,6 +259,13 @@ h2 {
 /* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
 
 @media(max-width:993px) {
+        .row-cards {
+        width: 100%;
+    }
+    .card-prediction {
+       width: 90%;
+       margin-left: 5%;
+    }
 
 }
 
@@ -255,5 +273,10 @@ h2 {
 /* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
 
 @media(max-width:522px) {
+
+
+    .card-canvas {
+        margin-left: 5%;
+    }
 
 }
