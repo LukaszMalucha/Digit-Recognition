@@ -1,7 +1,7 @@
 # Digit Recognition with Keras
 
 
-#### [Visit App on Heroku](https://digit-prediction1.herokuapp.com/)
+#### [Visit App on Heroku](https://digit-prediction.herokuapp.com/)
 
 <br>
 
