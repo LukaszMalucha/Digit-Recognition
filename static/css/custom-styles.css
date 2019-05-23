@@ -20,13 +20,6 @@ body {
 
 }
 
-body {
-    font-family: 'Jura', sans-serif;
-    background-image: url('../../static/img/background.png');
-    background-size: cover;
-
-}
-
 
 #wrapper {
     width: 100%;
