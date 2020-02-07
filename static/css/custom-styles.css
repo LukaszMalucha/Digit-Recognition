@@ -281,9 +281,10 @@ h2 {
 /* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
 
 @media(max-width:1024px) {
-        .row-cards {
+    .row-cards {
         width: 100%;
     }
+
     .card-prediction {
        width: 90%;
        margin-left: 5%;
