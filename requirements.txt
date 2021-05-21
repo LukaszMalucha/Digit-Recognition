@@ -17,7 +17,7 @@ scipy==1.1.0
 selenium==3.141.0
 SQLAlchemy==1.2.16
 tensorboard==1.13.1
-tensorflow==1.13.1
+tensorflow==2.5.0
 tensorflow-estimator==1.13.0
 Werkzeug==0.16.0
 WTForms==2.2.1
